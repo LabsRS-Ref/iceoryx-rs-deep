@@ -14,10 +14,14 @@ sudo apt install gcc g++ cmake libacl1-dev libncurses5-dev pkg-config
 
 #### 编译命令
 
+关于 iceoryx 的配置说明
+
+https://github.com/eclipse-iceoryx/iceoryx/blob/master/doc/website/advanced/configuration-guide.md
+
 ```bash
 cd iceoryx/
 cmake -Bbuild -Hiceoryx_meta
-cmake -Bbuild -Hiceoryx_meta -DCMAKE_PREFIX_PATH=$(PWD)/build/dependencies/
+cmake -Bbuild -Hiceoryx_meta -DCMAKE_PREFIX_PATH=$(PWD)/build/dependencies/ -DIOX_MAX_CHUNKS_HELD_PER_SUBSCRIBER_SIMULTANEOUSLY=4
 cmake --build build -j 4
 
 # 默认安装到`/usr/local`下
@@ -46,3 +50,15 @@ sudo cmake --build build -j 4 --target install
 ## 构建命令
 
 ## Demo 测试
+
+### 编译
+
+```
+cargo build --all --examples
+```
+
+### 运行
+
+- start RouDi `target/iceoryx-install/bin/iox-roudi`
+- start the publisher `target/debug/examples/publisher_simple`
+- start a subscriber `target/debug/examples/subscriber_simple`
