@@ -57,8 +57,23 @@ sudo cmake --build build -j 4 --target install
 cargo build --all --examples
 ```
 
-### 运行
+## 运行
 
-- start RouDi `target/iceoryx-install/bin/iox-roudi`
-- start the publisher `target/debug/examples/publisher_simple`
-- start a subscriber `target/debug/examples/subscriber_simple`
+
+### 常用操作
+
+- start RouDi 
+```bash
+./target/iceoryx-install/bin/iox-roudi -c ./roudi_config.toml 
+```
+- start
+```bash
+./elBoberido_iceray/target/debug/iceray
+```
+
+- start the publisher `./target/debug/examples/publisher_simple`
+- start a subscriber `./target/debug/examples/subscriber_simple`
+
+### 指定运行配置
+
+
