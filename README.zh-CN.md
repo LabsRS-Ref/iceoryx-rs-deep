@@ -28,7 +28,7 @@ sudo apt install gcc g++ cmake libacl1-dev libncurses5-dev pkg-config
 
 关于 iceoryx 的配置说明
 
-https://github.com/eclipse-iceoryx/iceoryx/blob/master/doc/website/advanced/configuration-guide.md
+<https://github.com/eclipse-iceoryx/iceoryx/blob/master/doc/website/advanced/configuration-guide.md>
 
 ```bash
 cd iceoryx/
@@ -81,30 +81,28 @@ sudo cmake --build build -j 4 --target install
   cargo build --all --examples
 ```
 
-
-
-
-
 ## 构建命令
 
 ## Demo 测试
 
 ### 编译
 
-```
+```bash
 cargo build --all --examples
 ```
 
 ## 运行
 
-
 ### 常用操作
 
-- start RouDi 
+- start RouDi
+
 ```bash
 ./target/iceoryx-install/bin/iox-roudi -c ./roudi_config.toml 
 ```
+
 - start
+
 ```bash
 ./elBoberido_iceray/target/debug/iceray
 ```
@@ -113,5 +111,3 @@ cargo build --all --examples
 - start a subscriber `./target/debug/examples/subscriber_simple`
 
 ### 指定运行配置
-
-
