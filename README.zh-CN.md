@@ -12,9 +12,9 @@
 source ./scripts/upgrade_rust.sh
 
 # 安装swift编译环境
+source ./scripts/install_swift.sh
 
 ```
-
 
 ### Linux
 
