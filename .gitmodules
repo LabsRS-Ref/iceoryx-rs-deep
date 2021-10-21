@@ -4,3 +4,6 @@
 [submodule "elBoberido_iceray"]
 	path = elBoberido_iceray
 	url = https://github.com/LabsRS-Ref/elBoberido_iceray.git
+[submodule "ext-workspaces/swc"]
+	path = ext-workspaces/swc
+	url = https://github.com/LabsRS-Ref/swc.git
