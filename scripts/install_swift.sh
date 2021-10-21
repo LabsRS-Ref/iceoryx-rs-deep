@@ -33,10 +33,21 @@ prepare()
 
 install()
 {
-   # 下载swift压缩包
-   mkdir -p "/workspace/.swift-vm/"
-   cd "/workspace/.swift-vm/"
+   # 设置存放位置
+   TEMP_DIR="/workspace/.swift-vm/"
 
+   # 下载swift压缩包
+   if [ -d "${TEMP_DIR}" ]; then
+      echo "${TEMP_DIR} 已经存在"
+   else
+      echo "创建目录: ${TEMP_DIR}"
+      mkdir -p "${TEMP_DIR}"
+   fi
+
+   # 变更工作区
+   cd "${TEMP_DIR}"
+
+   # 检查压缩包是否存在
    if [ -f "./${PKG_NAME}.tar.gz" ]; then
       echo "${PKG_NAME}.tar.gz 已经存在"
    else
@@ -44,7 +55,7 @@ install()
       wget https://swift.org/builds/swift-5.5-release/ubuntu2004/swift-5.5-RELEASE/swift-5.5-RELEASE-ubuntu20.04.tar.gz
    fi
    
-   # 删除源目录
+   # 删除源目录, 防止原先的文件有丢失的现象
    echo "删除部署目录"
    rm -fr ./${PKG_NAME}/
    
