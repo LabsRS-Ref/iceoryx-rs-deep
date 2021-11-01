@@ -7,3 +7,6 @@
 [submodule "ext-workspaces/swc"]
 	path = ext-workspaces/swc
 	url = https://github.com/LabsRS-Ref/swc.git
+[submodule "ext-workspaces/ian-swift-synx-playground"]
+	path = ext-workspaces/ian-swift-synx-playground
+	url = https://github.com/LabsRS-Ref/swift-synx-playground.git
